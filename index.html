@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita ser meu orientador no TCC?</title>
+
+    <style>
+        body{
+            background-color: rgb(209, 66, 166);
+        }
+
+        .btn {
+        background: rgb(241, 175, 99);
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+    .hbtn {
+        opacity: 0;
+    }
+
+.painel{
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 530px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#SIM{
+    height: 40px;
+    width: 60px;
+background-color: rgb(13, 192, 13);
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+margin-left: -50px;
+}
+
+    </style>
+
+</head>
+<body>
+    
+
+<div class="painel"> 
+	<h4> Assim como um pedido de casamento é um momento crucial na vida de duas pessoas, o TCC é um momento crucial na minha jornada acadêmica.</h4>
+
+
+<img src="image/java dia.png" alt="Afrânio dizendo Java dia" width="50%">
+
+<h1>Aceita ser meu orientador no TCC?</h1>
+<a href="https://www.youtube.com/watch?v=h7oqtfgvT64"><button id="SIM"> SIM!! </button></a>
+<button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+</div>
+
+<script>
+    
+
+function desvia(btn) {
+    btn.style.position = 'absolute';
+    btn.style.bottom = geraPosicao(10, 90);
+    btn.style.left = geraPosicao(10, 90);
+    console.log('opa, desviei...');
+}
+
+function geraPosicao(min, max) {
+    return (Math.random() * (max - min) + min) + "%";
+}
+
+
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
